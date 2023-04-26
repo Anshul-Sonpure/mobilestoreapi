@@ -1,12 +1,14 @@
-# JSONServer + JWT Auth
 
-A Fake REST API using json-server with JWT authentication. 
+# _Mobile Store API_
 
-Implemented End-points: login,register
+A Fake REST API using json-server with JWT authentication hosted on cloud service render.
 
+Implemented End-points: login,register and products
+
+If you want to clone this repo follow below steps:
 ## Install
 
-```bash
+```
 $ npm install
 $ npm run start-auth
 ```
@@ -21,10 +23,11 @@ npm audit fix
 You can login/register by sending a POST request to
 
 ```
-POST http://localhost:8000/auth/login
-POST http://localhost:8000/auth/register
+POST https://mobilestore-c8yg.onrender.com/auth/login
+POST https://mobilestore-c8yg.onrender.com/auth/register
 ```
-with the following data 
+with the following data or any email, password from users.json
+Validation is added for existing email or blank request body in /auth/login or /auth/register endpoints.
 
 ```
 {
@@ -42,17 +45,13 @@ You should receive an access token with the following format
 ```
 
 
-You should send this authorization with any request to the protected endpoints
-
+You should send this authorization with any request to the protected endpoints i.e. "/products". You can do all CRUD operation on database.json. 
+Please note there is no verification / validation on request body send to database.json.
 ```
 Authorization: Bearer <ACCESS_TOKEN>
 ```
 
-Check out these tutorials:
-
-- [Mocking a REST API Back-End for Your Angular App with JSON-Server and Faker.js](https://www.techiediaries.com/angular-mock-backend)
-- [Building a Fake and JWT Protected REST API with json-server](https://www.techiediaries.com/fake-api-jwt-json-server)
-- [Angular 9 Tutorial: Build an Example App with Angular CLI, Angular Router, HttpClient & Angular Material](https://www.shabang.dev/angular-tutorial-build-an-example-app-with-angular-cli-router-httpclient-and-angular-material/)
-
-
-
+Thank You\
+Happy Coding,\
+Learn,Code and Earn\
+Stay Safe and Stay Positive :)
