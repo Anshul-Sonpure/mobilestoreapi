@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Samsung Galaxy A23 Blue",
       "cost": 18999,
-      "quantity":100,
+      "quantity": 100,
       "locationId": 1,
       "DealerId": 1
     },
@@ -29,6 +29,14 @@
       "name": "Samsung Galaxy M33 5G ",
       "cost": 17999,
       "quantity": 4000,
+      "locationId": 2,
+      "DealerId": 3
+    },
+    {
+      "id": 5,
+      "name": "Samsung Galaxy Flip 5G ",
+      "cost": 70000,
+      "quantity": 1000,
       "locationId": 2,
       "DealerId": 3
     }
