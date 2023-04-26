@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Samsung Galaxy A23 Blue",
+      "cost": 18999,
+      "quantity":100,
+      "locationId": 1,
+      "DealerId": 1
+    },
+    {
+      "id": 2,
+      "name": "Redmi 11 Prime 5G",
+      "cost": 13249,
+      "quantity": 2000,
+      "locationId": 2,
+      "DealerId": 2
+    },
+    {
+      "id": 3,
+      "name": "OnePlus Nord CE 3 Lite 5G",
+      "cost": 19999,
+      "quantity": 3000,
+      "locationId": 3,
+      "DealerId": 3
+    },
+    {
+      "id": 4,
+      "name": "Samsung Galaxy M33 5G ",
+      "cost": 17999,
+      "quantity": 4000,
+      "locationId": 2,
+      "DealerId": 3
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "India"
+    },
+    {
+      "id": 2,
+      "name": "Canada"
+    },
+    {
+      "id": 3,
+      "name": "USA"
+    }
+  ],
+  "Dealer": [
+    {
+      "id": 1,
+      "name": "Sharma Bros."
+    },
+    {
+      "id": 2,
+      "name": "Carlson Ltd."
+    },
+    {
+      "id": 3,
+      "name": "Longbottom & Co."
+    },
+    {
+      "id": 4,
+      "name": "Smith & Sons"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "cost": 11,
+      "quantity": 10,
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "cost": 12,
+      "quantity": 100,
+      "productId": 2
+    },
+    {
+      "id": 3,
+      "cost": 15,
+      "quantity": 101,
+      "productId": 3
+    }
+  ]
+}
