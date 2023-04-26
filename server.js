@@ -27,7 +27,9 @@ function verifyToken(token){
 
 // Check if the user exists in database
 function isAuthenticated({email, password}){
-  return userdb.users.findIndex(user => user.email === email && user.password === password) !== -1
+    return userdb.users.findIndex(user => user.email === email && user.password === password) !== -1
+  
+  
 }
 
 // Register New User
@@ -41,6 +43,11 @@ server.post('/auth/register', (req, res) => {
     const message = 'Email and Password already exist';
     res.status(status).json({status, message});
     return
+  }
+  else(! req.body.email || !req.body.password)
+  { const status = 400;
+    const message = 'Please provide Email and Password';
+    res.status(status).json({status,message})
   }
 
 fs.readFile("./users.json", (err, data) => {  
@@ -86,9 +93,20 @@ server.post('/auth/login', (req, res) => {
     res.status(status).json({status, message})
     return
   }
-  const access_token = createToken({email, password})
-  console.log("Access Token:" + access_token);
-  res.status(200).json({access_token})
+  else if (isAuthenticated({email, password}) === true && !req.body.email || !req.body.password ) 
+  {
+    const status = 400
+    const message = 'Please provide email and password'
+    res.status(status).json({status, message})
+    return
+  }
+
+  else (isAuthenticated({email, password}) === true && !req.body.email || !req.body.password ) 
+  {
+    const access_token = createToken({email, password})
+    console.log("Access Token:" + access_token);
+    res.status(200).json({access_token})
+  }
 })
 
 server.use(/^(?!\/auth).*$/,  (req, res, next) => {
