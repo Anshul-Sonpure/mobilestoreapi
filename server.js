@@ -44,12 +44,13 @@ server.post('/auth/register', (req, res) => {
     res.status(status).json({status, message});
     return
   }
-  else(! req.body.email || !req.body.password)
-  { const status = 400;
-    const message = 'Please provide Email and Password';
-    res.status(status).json({status,message})
+  else if (isAuthenticated({email, password}) === false && !req.body.email || !req.body.password ) 
+  {
+    const status = 400
+    const message = 'Please provide email and password'
+    res.status(status).json({status, message})
+    return
   }
-
 fs.readFile("./users.json", (err, data) => {  
     if (err) {
       const status = 401
