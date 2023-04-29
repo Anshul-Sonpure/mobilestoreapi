@@ -39,6 +39,23 @@
       "quantity": 1000,
       "locationId": 2,
       "DealerId": 3
+    },
+    {
+      "name": "Samsung Galaxy S23 Blue",
+      "cost": 120000,
+      "quantity": 100,
+      "locationId": 3,
+      "DealerId": 1,
+      "id": 6
+    },
+    
+    {
+      "name": "Apple iphone 12pro ",
+      "cost": "67000",
+      "locationId": "2",
+      "dealerId": "1",
+      "quantity": "100",
+      "id": 8
     }
   ],
   "locations": [

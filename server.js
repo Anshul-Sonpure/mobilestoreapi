@@ -125,7 +125,7 @@ server.use(/^(?!\/auth).*$/,  (req, res, next) => {
 
      if (verifyTokenResult instanceof Error) {
        const status = 401
-       const message = 'Access token not provided'
+       const message = 'Error access_token is revoked'
        res.status(status).json({status, message})
        return
      }
